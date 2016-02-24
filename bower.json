@@ -1,0 +1,24 @@
+{
+  "name": "Quick App Software Development",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "*",
+    "angular-route": "*",
+    "angular-animate": "*",
+    "angular-touch": "*",
+    "bootstrap": "*",
+    "jquery": "*",
+    "angular-bootstrap": "*",
+    "angular-ui-sortable": "*",
+    "angular-ui-utils": "bower",
+    "angular-multi-select": "*",
+    "html5shiv": "*"
+  },
+  "devDependencies": {
+    "angular-mocks": "*"
+  },
+  "resolutions": {
+    "angular": "*",
+    "jquery": "*"
+  }
+}

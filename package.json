@@ -1,0 +1,16 @@
+{
+  "name": "PassingData",
+  "version": "1.0.0",
+  "description": "My Map",
+  "dependencies": {
+    "body-parser": "*",
+    "bower": "*",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-session": "*",
+    "lodash": "^4.5.1"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
