@@ -1,17 +1,18 @@
 
-<div ng-controller="HomeController" ng-init="init()" class="col-md-12">
-    <div class="page-header">
-        <h1>My Map App View</h1>
-    </div>
+<div ng-include="'app/features/homeFactory/homeFactory.tpl.html'"></div>
+<div ng-include="'app/features/factory1/factory1.tpl.html'"></div>
 
-    Home Controller Item Values : {{items}}
+<div ng-include="'app/partials/parentBase.html'"></div>
+<div ng-include="'app/features/parent1/parent1.tpl.html'"></div>
 
-    <button ng-click="buttonClick()">Set Data</button>
-    <br/>
-</div>
 
-<div ng-controller="Visitor1Controller" >
+<div ng-include="'app/features/homeBroadcast/homeBroadcast.tpl.html'"></div>
+<div ng-include="'app/features/Broadcast1/Broadcast1.tpl.html'"></div>
 
-    Visitor 1 Controller Item Values : {{visitor1Items}}
-    <br/>
-</div>
+<div ng-include="'app/features/homeVisitor/homeVisitor.tpl.html'"></div>
+<div ng-include="'app/features/visitor1/visitor1.tpl.html'"></div>
+
+<div ng-include="'app/features/homeListener/homeListener.tpl.html'"></div>
+<div ng-include="'app/features/listener1/listener1.tpl.html'"></div>
+<div ng-include="'app/features/listener2/listener2.tpl.html'"></div>
+<div ng-include="'app/features/listener3/listener3.tpl.html'"></div>

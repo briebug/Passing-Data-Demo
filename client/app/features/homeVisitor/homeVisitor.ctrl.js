@@ -1,5 +1,5 @@
 angular.module('myApp.Controllers')
-.controller('HomeController', ['$scope', 'dataService',function($scope, dataService){
+.controller('HomeVisitorController', ['$scope', 'visitorDataService',function($scope, visitorDataService){
 
         //'use strict';
         $scope.init = function () {
@@ -11,11 +11,11 @@ angular.module('myApp.Controllers')
         }
 
         function setData() {
-            dataService.changeItem();
+            visitorDataService.changeItem();
             getItem()
         };
 
         function getItem(){
-            $scope.items = dataService.getItem();
+            $scope.items = visitorDataService.getItem();
         };
     }])

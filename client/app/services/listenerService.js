@@ -1,8 +1,13 @@
-app.service('visitorDataService', function() {
+app.service('listenerDataService', function() {
 
     var item = 1;
-    var visitor1ControllerContext;
+    var dataListeners = [];
     var svc = {
+
+        registerDataListener: function(f) {
+            dataListeners.push(f);
+        },
+
         changeItem: function() {
             item = Math.floor((Math.random() * 100) + 1);
             this.notifyAll();
@@ -12,13 +17,9 @@ app.service('visitorDataService', function() {
             return item;
         },
 
-       registerContext: function (context) {
-            visitor1ControllerContext = context;
-        },
-
         notifyAll: function () {
-            if(visitor1ControllerContext){
-                visitor1ControllerContext.myItem();
+            for (var i = 0; i < dataListeners.length; i++) {
+                dataListeners[i].myItem(item);
             }
         }
     }

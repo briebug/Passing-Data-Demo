@@ -42,8 +42,21 @@ app.config(['$routeProvider', '$locationProvider',
         $locationProvider.html5Mode(true);
     }]);
 
-app.controller('BaseController', ['$rootScope', function($rootScope) {
+
+app.controller('BaseController', ['$scope', '$rootScope', 'baseService', function($scope, $rootScope, baseService) {
     'use strict';
 
+    $scope.buttonClick = function(){
+        setData();
+    }
+
+    function setData() {
+        baseService.changeItem();
+        getItem();
+    };
+
+    function getItem(){
+        $scope.parentItems = baseService.getItem();
+    };
 
 }]);

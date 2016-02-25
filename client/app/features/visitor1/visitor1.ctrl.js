@@ -1,19 +1,13 @@
 angular.module('myApp.Controllers')
-.controller('Visitor1Controller', ['$scope', 'dataService', function($scope, dataService){
+.controller('Visitor1Controller', ['$scope', 'visitorDataService', function($scope, visitorDataService){
 
         'use strict';
 
-        $scope.visitor1Items = dataService.getItem();
-        $scope.getNewItems = function(){
+        $scope.visitor1Items = visitorDataService.getItem();
 
-            $scope.visitor1Items = dataService.changeItem();
-            $scope.visitor1Items = dataService.getItem();
-
-        };
-
-        dataService.registerContext(this);
+        visitorDataService.registerContext(this);
 
         this.myItem = function () {
-            $scope.visitor1Items = dataService.getItem();
+            $scope.visitor1Items = visitorDataService.getItem();
         };
     }]);
