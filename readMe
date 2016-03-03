@@ -1,0 +1,4 @@
+to start project, in PassingData directory run command:
+npm install
+bower install
+node server
