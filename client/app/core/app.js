@@ -16,7 +16,6 @@ angular
         'ui.bootstrap'
     ]);
 
-
 angular
     .module('myApp.Session', []);
 
